@@ -1,0 +1,36 @@
+~/MakRepo/ReactNative/UdemyTutorial$ react-native init albums
+This will walk you through creating a new React Native project in /Users/makila/MakRepo/ReactNative/UdemyTutorial/albums
+Installing react-native...
+Consider installing yarn to make this faster: https://yarnpkg.com
+npm WARN deprecated connect@2.30.2: connect 2.x series is deprecated
+
+> fsevents@1.1.2 install /Users/makila/MakRepo/ReactNative/UdemyTutorial/albums/node_modules/fsevents
+> node install
+
+[fsevents] Success: "/Users/makila/MakRepo/ReactNative/UdemyTutorial/albums/node_modules/fsevents/lib/binding/Release/node-v48-darwin-x64/fse.node" already installed
+Pass --update-binary to reinstall or --build-from-source to recompile
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN react-native@0.47.2 requires a peer of react@16.0.0-alpha.12 but none was installed.
+
++ react-native@0.47.2
+added 690 packages in 44.259s
+Setting up new React Native app in /Users/makila/MakRepo/ReactNative/UdemyTutorial/albums
+Installing React...
++ react@16.0.0-alpha.12
+added 1 package in 8.307s
+Installing Jest...
++ babel-jest@20.0.3
++ react-test-renderer@16.0.0-alpha.12
++ jest@20.0.4
++ babel-preset-react-native@3.0.1
+added 132 packages and updated 1 package in 17.194s
+To run your app on iOS:
+   cd /Users/makila/MakRepo/ReactNative/UdemyTutorial/albums
+   react-native run-ios
+   - or -
+   Open ios/albums.xcodeproj in Xcode
+   Hit the Run button
+To run your app on Android:
+   cd /Users/makila/MakRepo/ReactNative/UdemyTutorial/albums
+   Have an Android emulator running (quickest way to get started), or a device connected
+   react-native run-android
