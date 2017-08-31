@@ -19,7 +19,12 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: 60, // pixel value. get 60 pixels on the screen
-    paddingTop: 15 // like in css. Add padding to the top of the element
+    paddingTop: 15, // like in css. Add padding to the top of the element
+    shadowColor: '#000', //shadow on the element with black colour
+    shadowOffset: { width: 0, height: 10 }, //how taller and how wider the shadow should be.
+    shadowOpacity: 0.9, //darkness of the shadow
+    elevation: 2,
+    position: 'relative'
   },
   textStyle: {
     fontSize: 20
