@@ -14,7 +14,12 @@ const Header = () => {
 
 const styles = {
   viewStyle: {
-    backgroundColor: '#F8F8F8'
+    backgroundColor: '#F8F8F8',
+    //flex box properties 'justifyContent' and 'alignItems'
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60, // pixel value. get 60 pixels on the screen
+    paddingTop: 15 // like in css. Add padding to the top of the element
   },
   textStyle: {
     fontSize: 20
