@@ -7,12 +7,13 @@ const AlbumDetail = ({ album }) => {
   //desturcturing.. instead of props.alubm.title, get only lbum from props object
   // in the args. And get all properties in album  as below and directly use them.
   // same goes for styles as well
-  const { title, artist, thumbnail_image } = album;
+  const { title, artist, thumbnail_image, image } = album;
 
   const { thumbnailStyle,
           headerContentStyle,
           thumbnailContainerStyle,
-          headerTextStyle } = styles;
+          headerTextStyle,
+          imageStyle } = styles;
 
   return (
     <Card>
@@ -28,6 +29,10 @@ const AlbumDetail = ({ album }) => {
           <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
+      </CardSection>
+
+      <CardSection>
+        <Image style={imageStyle} source={{ uri: image }} />
       </CardSection>
     </Card>
   );
@@ -50,6 +55,11 @@ const styles = {
     alignItems: 'center',
     marginLeft: 10,
     marginRight: 10
+  },
+  imageStyle: {
+    height: 300,
+    width: null,
+    flex: 1
   }
 };
 
