@@ -11,7 +11,7 @@ const Card = (props) => {
 
 const styles = {
   //'containerStyle' (or) can be any name - names for styles property are completely arbitrary
-  containerStyle : {
+  containerStyle: {
     //border
     borderWidth: 1,
     borderRadius: 2,
