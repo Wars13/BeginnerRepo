@@ -9,18 +9,18 @@ const AlbumDetail = ({ album }) => {
   // same goes for styles as well
   const { title, artist, thumbnail_image } = album;
   const { thumbnailStyle, headerContentStyle } = styles;
-  
+
   return (
     <Card>
       <CardSection>
-        <View style={headerContentStyle}>
+        <View>
           <Image
             source={{ uri: thumbnail_image }}
             style={thumbnailStyle}
           />
         </View>
 
-        <View>
+        <View style={headerContentStyle}>
           <Text>{title}</Text>
           <Text>{artist}</Text>
         </View>
