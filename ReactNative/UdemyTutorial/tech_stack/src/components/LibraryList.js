@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
+import { ListView } from 'react-native';
 import { connect } from 'react-redux';
 
 class LibraryList extends Component {
+
+  // componentWillMount - lifecycle method..
+  // all we have to do is define it.
+  componentWillMount() {
+    const ds = new ListView.DataSource({
+      rowHasChanged: (r1, r2) => r1 !== r2
+    });
+    //when we create ListView, we have to tel what DataSource it has to use
+    this.dataSource = ds.cloneWithRows(this.props.libraries);
+  }
+
+  // renderRow - arbitray method name
+  //used to insturct ListView how to render the list with property renderRow=<method>
+  renderRow() {
+    
+  }
+
   render() {
-    console.log(this.props); // expectation: it should have array of objects.. (libraries)
-    return;
+    return (
+      <ListView
+        dataSource={this.dataSource}
+        renderRow={this.renderRow}
+      />
+    );
   }
 }
 
-// function takes global state object (that sits in our Redux store)
-// and proivde them as Props to our LibraryList.
 const mapStateToProps = state => {
-  //objects returned from here will be shown as props to LibraryList component.
-  // libraries: state.libraries (or) dataToShow: state.libraries (or) any ohter name..
   return { libraries: state.libraries };
-  //state.libraries is representation to our array of libraries set in LibraryReducer.
 };
 
 export default connect(mapStateToProps)(LibraryList);
-//it calls the function connect .. connect returns another function..
-//we then immediately call that function with LibraryList.
-
-//why not simply connect(LibraryList)? :P
