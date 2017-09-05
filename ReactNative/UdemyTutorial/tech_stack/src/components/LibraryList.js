@@ -12,6 +12,7 @@ class LibraryList extends Component {
 // and proivde them as Props to our LibraryList.
 const mapStateToProps = state => {
   //objects returned from here will be shown as props to LibraryList component.
+  // libraries: state.libraries (or) dataToShow: state.libraries (or) any ohter name..
   return { libraries: state.libraries };
   //state.libraries is representation to our array of libraries set in LibraryReducer.
 };
