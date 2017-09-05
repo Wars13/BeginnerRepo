@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 class LibraryList extends Component {
   render() {
+    console.log(this.props); // expectation: it should have array of objects.. (libraries)
     return;
   }
 }
@@ -10,7 +11,9 @@ class LibraryList extends Component {
 // function takes global state object (that sits in our Redux store)
 // and proivde them as Props to our LibraryList.
 const mapStateToProps = state => {
-  console.log(state);
+  //objects returned from here will be shown as props to LibraryList component.
+  return { libraries: state.libraries };
+  //state.libraries is representation to our array of libraries set in LibraryReducer.
 };
 
 export default connect(mapStateToProps)(LibraryList);
