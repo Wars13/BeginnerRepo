@@ -7,9 +7,9 @@ import * as actions from '../actions'; // * - import all action creators as acti
 class ListItem extends Component {
 
   renderDescription() {
-    const { library, selectedLibraryId } = this.props;
+    const { library, expanded } = this.props;
 
-    if (library.id === selectedLibraryId) {
+    if (expanded) {
       return (
         <Text>{library.description}</Text>
       );
@@ -41,10 +41,10 @@ const styles = {
   }
 };
 
-const mapStateToProps = state => {
-  // anyName : state.selectedLibraryId because
-  //SelectedReducer is wired up to the key selectedLibraryId in the index.js of reducers.
-  return { selectedLibraryId: state.selectedLibraryId };
+const mapStateToProps = (state, ownProps) => {
+  const expanded = state.selectedLibraryId === ownProps.library.id;
+  //expanded - like boolean
+  return { expanded };
 };
 
 //first argument of connect is exclusively for mapStateToProps..
